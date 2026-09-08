@@ -151,11 +151,15 @@ qeCIPipelines:
     #     - hosted
     #     - single
 
-    # ragllm:
-    #   platforms:
-    #     aws:
-    #   flavors:
-    #     single:
+    ragllm:
+      repo: https://github.com/dminnear-rh/rag-llm-gitops.git
+      revision: pipeline_test
+      platforms:
+        aws:
+        azure:
+      flavors:
+        single:
+          clusterGroup: ci
 
   scheduleDefaults:
     suspend: false
