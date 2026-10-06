@@ -198,6 +198,17 @@ qeCIPipelines:
         single:
           clusterGroup: ci
 
+    secure-agent-workspace:
+      repo: https://github.com/dminnear-rh/secure-agent-workspace.git
+      revision: add-tests
+      platforms:
+        aws:
+      flavors:
+        single:
+          clusterGroup: prod
+      secrets:
+        - saw-secret-values-file
+
   scheduleDefaults:
     suspend: false
     concurrencyPolicy: Forbid
